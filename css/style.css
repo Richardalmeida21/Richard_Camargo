@@ -5,7 +5,8 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: white; /* Adicione um fundo para evitar sobreposição de conteúdo */
+    background-color: white; 
+    z-index: 1000;/* Adicione um fundo para evitar sobreposição de conteúdo */
 }
 
 nav {
@@ -439,6 +440,7 @@ input:focus, textarea:focus {
     .projeto {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .projeto.right {

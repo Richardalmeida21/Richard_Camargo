@@ -1,8 +1,14 @@
+function toggleMenu() {
+  const menu = document.querySelector('ul.menu');
+  menu.classList.toggle('active');
+}
 
-document.querySelector('.hamburger').addEventListener('click', function() {
-  document.querySelector('ul.menu').classList.toggle('active');
+document.querySelectorAll('ul.menu a').forEach(link => {
+  link.addEventListener('click', () => {
+      const menu = document.querySelector('ul.menu');
+      menu.classList.remove('active');
+  });
 });
-
 
 document.addEventListener("DOMContentLoaded", function() {
     const texts = [

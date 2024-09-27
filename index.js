@@ -44,4 +44,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // Iniciar a digitação
     typeText();
   });
-  
+
+// index.js
+
+// Verifica se o AOS foi carregado e inicializa
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof AOS !== 'undefined') {
+      AOS.init();
+  } else {
+      console.error('AOS library not loaded');
+  }
+});

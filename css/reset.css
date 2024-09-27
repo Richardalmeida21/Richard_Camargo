@@ -9,11 +9,23 @@
     font-family: var(--main-font);
     text-decoration: none;
     color: var(--main-color);
+    text-align: center;
+    outline: none;
 }
 
 li {
     list-style: none;
 }
+
+body {
+    width: 100%;
+    background-color: white; /* Adicione um fundo para evitar sobreposição de conteúdo */
+}
+
+html {
+    scroll-behavior: smooth; /* Adiciona rolagem suave */
+}
+
 
 :root {
 
@@ -21,6 +33,7 @@ li {
     --bg-primary-color: #fff;
     --main-color: #272277;
     --complementary-color: #dcd6e8;
+    --hover:#291fb3d5;
 
     /*Fonts*/
     --title-font: 'Raleway', sans-serif;

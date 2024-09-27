@@ -1,4 +1,9 @@
 
+document.querySelector('.hamburger').addEventListener('click', function() {
+  document.querySelector('ul.menu').classList.toggle('active');
+});
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const texts = [
       "Sou Desenvolvedor Web",

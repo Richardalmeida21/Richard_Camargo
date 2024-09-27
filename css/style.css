@@ -1,5 +1,7 @@
+
+
 header {
-    padding: 1rem 4rem;
+    padding: 2rem clamp(1rem, 4vw, 4rem);
     position: fixed;
     top: 0;
     width: 100%;
@@ -30,6 +32,7 @@ ul {
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
 }
 
 .title-inicio {
@@ -37,7 +40,7 @@ ul {
     font-size: clamp(2rem, 5vw, 4rem); /* Tamanho de fonte responsivo */
     font-weight: bold;
 }
-  
+
 #animated-text {
     font-size: clamp(1.5rem, 4vw, 3rem); /* Tamanho de fonte responsivo */
     font-weight: 300;
@@ -47,24 +50,25 @@ ul {
     display: inline-block;
     animation: blink-caret 0.75s step-end infinite; /* Adiciona a animação do cursor */
 }
-  @keyframes blink-caret {
+
+@keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: var(--main-color); }
-  }
+}
 
-  .container-redes {
+.container-redes {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     margin-top: 1.5rem;
-  }
+}
 
-  .container-redes i {
-    font-size: 1.5rem;
-  }
+.container-redes i {
+    font-size: 2rem;
+}
 
-  .download-button {
+.download-button {
     background-color: var(--main-color); /* Use sua cor principal */
     color: white;
     border: none;
@@ -73,16 +77,16 @@ ul {
     cursor: pointer;
     border-radius: 5px; /* Cantos arredondados */
     transition: background-color 0.3s ease;
-  }
+}
 
-  .scroll {
-    position: absolute; /* Posiciona o elemento dentro do contêiner pai */
-    bottom: 30px; /* Ajuste conforme necessário */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajusta para centralizar perfeitamente */
+.scroll {
+    position: absolute;
+    bottom: 2rem; /* Ajuste conforme necessário */
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Centraliza o botão de scroll */
+    width: 100%; /* Garante que o botão de scroll ocupe toda a largura disponível */
 }
 
 .scroll a {
@@ -98,6 +102,362 @@ ul {
         transform: translateY(-10px); /* Move para cima */
     }
 }
-  
-  
-  
+
+.container-sobre {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 85%;
+    font-size: 1.3rem;
+    padding: 0 3rem;
+}
+
+.article-sobre p {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.title-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    font-size: 2rem;
+    font-family: var(--title-font);
+}
+
+.title-about p {
+    font-size: clamp(.9rem, 1.5vw, 1.5rem);
+}
+
+.traco-sobre {
+    width: 70px;
+    height: 3px;
+    background-color: var(--main-color);
+}
+
+.container-tech {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container-tech h2 {
+    font-weight: 400;
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 20px;
+}
+
+.tech-icons i {
+    flex: 1 1 50px; 
+    max-width: 100px; 
+    text-align: center;
+    font-size: 2rem;
+}
+
+.tech-icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tech-icon span {
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.tech-icon:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Estilos para a seção de projetos */
+.container-projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.container-projetos h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 5rem;
+}
+
+.projeto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 80%; /* Ajuste conforme necessário */
+}
+
+.projeto.right {
+    flex-direction: row-reverse;
+}
+
+.pc {
+    width: 50%;
+    height: 300px; /* Ajuste conforme necessário */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px; 
+}
+
+.info-projeto {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info-projeto h3 {
+    margin-top: 0;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.btn-projeto {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--main-color); /* Ajuste conforme a paleta do seu site */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.btn-projeto:hover {
+    background-color: var(--hover);
+    transition: .6s;
+}
+
+.pc { 
+    width: 500px; 
+    height: 250px;
+    background-size: cover; /* Ajusta a imagem para cobrir o elemento */
+    margin: 4rem 0; /* Centraliza o elemento horizontalmente */
+    display: flex;
+    align-items: end;
+}
+
+.celular {
+    width: 200px; /* Define a largura máxima */
+    height: 300px;
+    background-size: cover; /* Ajusta a imagem para cobrir o elemento */
+    position: relative;
+    left: 50%; /* Centraliza o elemento horizontalmente */
+}
+
+.pj1-pc {
+    background: url(../images/tela-pc.png) no-repeat center;
+}
+.pj1-cel {
+    background: url(../images/tela-celular.png) no-repeat center;
+}
+
+.pj2-pc {
+    background: url(../images/tela-pc-pj2.png) no-repeat center;
+}
+
+.pj2-cel {
+    background: url(../images/tela-celular-pj2.png) no-repeat center;
+}
+
+.pj3-pc {
+    background: url(../images/tela-pc-pj3.png) no-repeat center;
+}
+.pj3-cel 
+{
+    background: url(../images/tela-celular-pj3.png) no-repeat center;
+}
+
+main {
+    border-bottom: 1px solid var(--main-color);
+}
+/* Estilos para a seção de contato */
+.container-contato {
+    padding: 40px;
+    background-color: #f9f9f9; /* Ajuste conforme a paleta do seu site */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.container-contato h2 {
+    color: var(--main-color); 
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Estilos para os elementos do formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.btn-submit {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: var(--main-color); /* Ajuste conforme a paleta do seu site */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--complementary-color); /* Ajuste conforme a paleta do seu site */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: var(--main-color);
+    margin: 4px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    ul.menu {
+        opacity: 0;
+        visibility: hidden;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 1rem;
+        position: absolute;
+        top: 0; 
+        right: 0;
+        background-color: white;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+        z-index: 10;
+    }
+
+    ul.menu.active {
+        opacity: 1;
+        visibility: visible;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .article-sobre {
+        max-width: 100%;
+        padding: 0 1rem;
+        font-size: 1.2rem;
+    }
+
+    .article-sobre p {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .title-about p {
+        font-weight: bold;
+    }
+
+    .tech-icons {
+        font-size: 1.2rem; /* Ajusta o tamanho dos ícones em telas menores */
+    }
+
+    .tech-icons i {
+        flex: 1 1 30px; /* Ajusta o tamanho mínimo dos ícones em telas menores */
+        max-width: 80px; /* Limita a largura máxima dos ícones em telas menores */
+    }
+
+    .projeto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projeto.right {
+        flex-direction: column;
+    }
+
+    .pc, .info-projeto {
+        width: 100%;
+    }
+
+    .pc {
+        height: auto;
+    }
+
+    .info-projeto {
+        text-align: center;
+    }
+
+
+
+
+}

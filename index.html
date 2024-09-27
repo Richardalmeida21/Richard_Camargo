@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./images/Logo.png" type="image/x-icon">
 
     <!--Css-->
     <link rel="stylesheet" href="./css/reset.css">
@@ -11,24 +14,31 @@
     <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <title>Richard Camargo | Web Developer</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <title>Richard Camargo | Portifólio</title>
 </head>
-<body>
 
+<body>
     <header>
         <nav>
-            <img src="./images/Logo.png" alt="Logo Richard Camargo">
-            <ul>
+            <img src="images/Logo.png" alt="Logo">
+            <ul class="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">Sobre</a></li>
-                <li><a href="#services">Projetos</a></li>
+                <li><a href="#projects">Projetos</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
-    <section class="container-inicio">
+    <section class="container-inicio" id="home">
         <div>
             <h1 class="title-inicio">Olá, meu nome é Richard</h1>
             <div id="animated-text"></div> <!-- texto animado -->
@@ -37,17 +47,166 @@
                 <a href="#"><i class="bi bi-github"></i></a>
                 <a href="./assets/Richard Camargo.pdf" download>
                     <button class="download-button">Baixar Currículo</button>
-                  </a>
+                </a>
             </div>
         </div>
         <div class="scroll">
-            <a href="#"><i class="bi bi-chevron-double-down"></i></a>
+            <a href="#about"><i class="bi bi-chevron-double-down"></i></a>
             <p>Scroll Down</p>
         </div>
-      </section> 
+    </section>
 
+    <main>
 
-</body>
+        <section class="container-sobre" id="about">
+            <div class="title-about">
+                <h1>Sobre Mim</h1>
+                <div class="traco-sobre"></div>
+                <p>Conheça um pouco sobre mim e minha jornada até aqui..</p>
+            </div>
+
+            <article class="article-sobre">
+                <p>
+                    Olá, meu nome é Richard, minha jornada começou no desenvolvimento web
+                    (Front-end) e atualmente estou buscando me aprimorar no desenvolvimento Full Stack. Estou cursando
+                    Análise e Desenvolvimento de Sistemas na FIAP. Durante essa jornada acabei me apegando a tecnologia
+                    e meu principal objetivo se tornou ingressar na área e me desenvolver como profissional para trazer
+                    soluções criativas e inovadoras.
+                </p>
+                <div class="container-tech">
+                    <h2>Tecnologias que conheço</h2>
+                    <div class="tech-icons">
+                        <div class="tech-icon">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fa-brands fa-bootstrap"></i>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fa-brands fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fa-solid fa-database"></i>
+                            <span>Database</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fa-brands fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fa-brands fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="container-projetos" id="projects">
+            <h2>Projetos</h2>
+        
+            <div class="projeto">
+                <div class="pc pj1-pc">
+                    <div class="celular pj1-cel"></div>
+                </div>
+                <div class="info-projeto">
+                    <h3>Dashboard Financeiro</h3>
+                    <div class="traco-sobre"></div>
+                    <p>
+                        Projeto em parceria com Ifood e Fiap, Desenvolvido com HTML, CSS e JavaScript, este dashboard
+                        oferece visualizações dinâmicas de dados
+                        de vendas e pedidos, permitindo aos restaurantes parceiros do iFood acompanhar métricas em tempo
+                        real. Inclui gráficos interativos, filtros customizáveis e é totalmente responsivo para
+                        dispositivos móveis e desktop.
+                    </p>
+                    <a href="#" class="btn-projeto">Ver Projeto</a>
+                </div>
+            </div>
+        
+            <div class="projeto right">
+                <div class="pc pj2-pc">
+                    <div class="celular pj2-cel"></div>
+                </div>
+                <div class="info-projeto">
+                    <h3>Landing Page</h3>
+                    <div class="traco-sobre"></div>
+                    <p>
+                        Esta landing page foi desenvolvida com HTML, CSS e JavaScript para promover os serviços de uma
+                        cabeleireira. O design é moderno e elegante, com foco na usabilidade e na conversão de
+                        visitantes em clientes. A página destaca os principais serviços, depoimentos de clientes, fotos
+                        de trabalhos anteriores e integra um formulário de agendamento online, além de ser totalmente
+                        responsiva para dispositivos móveis.
+                    </p>
+                    <a href="#" class="btn-projeto">Ver Projeto</a>
+                </div>
+            </div>
+        
+            <div class="projeto">
+                <div class="pc pj3-pc">
+                    <div class="celular pj3-cel"></div>
+                </div>
+                <div class="info-projeto">
+                    <h3>App Previsão</h3>
+                    <div class="traco-sobre"></div>
+                    <p>
+                        Este aplicativo de previsão do tempo foi desenvolvido com React e consome uma API de dados
+                        meteorológicos em tempo real. A interface é simples e intuitiva, permitindo que os usuários
+                        consultem a previsão atual e dos próximos dias para qualquer localidade. O design é responsivo e
+                        otimizado para fornecer uma experiência fluida em diversos dispositivos.
+                    </p>
+                    <a href="#" class="btn-projeto">Ver Projeto</a>
+                </div>
+            </div>
+        </section>
+        
+
+    </main>
+
+    <section class="container-contato" id="contact">
+        <h2>Entre em contato</h2>
+        <form action="submit_form.php" method="post">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn-submit">Enviar</button>
+            </div>
+        </form>
+    </section>
+
+   
 
     <script src="index.js"></script>
+</body>
+
 </html>

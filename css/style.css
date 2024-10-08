@@ -585,8 +585,18 @@ form i {
         text-align: center;
     }
 
+    .container-contato {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
     input, textarea, form {
         width: 100%;
+        
+    }
+
+    form i {
+        font-size: 1rem;
     }
 
     .container-footer {

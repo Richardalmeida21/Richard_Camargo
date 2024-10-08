@@ -61,3 +61,33 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('AOS library not loaded');
   }
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        const formData = new FormData(form);
+
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+        })
+        .then(response => {
+            if (response.ok) {
+                formMessage.style.display = 'block';
+                form.reset(); // Limpa o formulário após o envio
+            } else {
+                alert('Houve um problema ao enviar o formulário. Tente novamente.');
+            }
+        })
+        .catch(error => {
+            alert('Houve um problema ao enviar o formulário. Tente novamente.');
+        });
+    });
+});

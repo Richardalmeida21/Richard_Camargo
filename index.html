@@ -183,7 +183,7 @@
 
     <section class="container-contato" id="contact">
         <h2>Entre em contato</h2>
-        <form name="contact" method="post" data-netlify="true">
+        <form id="contact-form" name="contact" method="post" data-netlify="true">
             <input type="hidden" name="form-name" value="contact">
             <div class="form-group">
                 <label for="name">Seu nome:</label>
@@ -205,6 +205,9 @@
                 <button type="submit" class="btn-submit">Enviar</button>
             </div>
         </form>
+        <div id="form-message" style="display: none; padding: 10px; border: 1px solid #ccc; margin-top: 10px;">
+            Obrigado por entrar em contato! Recebemos sua mensagem.
+        </div>
     </section>
 
     <footer class="footer">

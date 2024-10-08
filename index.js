@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(response => {
         if (response.ok) {
             Swal.fire({
-                title: 'Obrigado!',
-                text: 'Recebemos sua mensagem.',
+                title: 'Muito Obrigado!',
+                text: 'Recebi sua mensagem, entrarei em contato em breve :)',
                 icon: 'success',
                 confirmButtonText: 'Fechar'
             });

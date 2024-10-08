@@ -319,13 +319,16 @@ ul {
 /* Estilos para os elementos do formulário */
 .form-group {
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--main-color);
-    font-weight: bold;
+    display: none;
 }
 
 input, textarea {
@@ -344,6 +347,10 @@ input:focus, textarea:focus {
     border-color: var(--main-color);
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
     outline: none;
+}
+
+form i {
+    font-size: 1.5rem;
 }
 
 .btn-submit {

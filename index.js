@@ -63,31 +63,44 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contact-form');
-    const formMessage = document.getElementById('form-message');
+  const form = document.getElementById('contact-form');
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
+  form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
 
-        const formData = new FormData(form);
+      const formData = new FormData(form);
 
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData).toString()
-        })
-        .then(response => {
-            if (response.ok) {
-                formMessage.style.display = 'block';
-                form.reset(); // Limpa o formulário após o envio
-            } else {
-                alert('Houve um problema ao enviar o formulário. Tente novamente.');
-            }
-        })
-        .catch(error => {
-            alert('Houve um problema ao enviar o formulário. Tente novamente.');
+      fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(formData).toString()
+      })
+      .then(response => {
+        if (response.ok) {
+            Swal.fire({
+                title: 'Obrigado!',
+                text: 'Recebemos sua mensagem.',
+                icon: 'success',
+                confirmButtonText: 'Fechar'
+            });
+            form.reset(); // Limpa o formulário após o envio
+        } else {
+            Swal.fire({
+                title: 'Erro!',
+                text: 'Houve um problema ao enviar o formulário. Tente novamente.',
+                icon: 'error',
+                confirmButtonText: 'Fechar'
+            });
+        }
+    })
+    .catch(error => {
+        Swal.fire({
+            title: 'Erro!',
+            text: 'Houve um problema ao enviar o formulário. Tente novamente.',
+            icon: 'error',
+            confirmButtonText: 'Fechar'
         });
     });
+});
 });

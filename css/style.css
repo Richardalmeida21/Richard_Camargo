@@ -358,6 +358,16 @@ input:focus, textarea:focus {
     font-size: 1.2rem;
 }
 
+.form-message {
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    display: block;
+
+}
+
 /* Footer Styles */
 .footer {
     background-color: var(--main-color); /* Ajuste conforme a paleta do seu site */
